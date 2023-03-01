@@ -1,5 +1,3 @@
-# print("Current open window name: %s. Current time and date: %s .\n" % (window, datetime.datetime.now()))
-import datetime
 import win32gui
 import json
 import time
@@ -15,9 +13,7 @@ def saveData(filePath:str, data:str):
         json.dump(data, file)
 
 w = win32gui
-date = datetime.datetime.now()
 oldWindow = ""
-oldTime = datetime.datetime.now()
 
 DATA_FILE = "data.json"
 CLEAR = "\033[2J"
